@@ -1,11 +1,12 @@
 let start = document.getElementById('start'),
     stop = document.getElementById('stop'),
     mediaRecorder,
-    preview = document.getElementById("preview");
+    preview = document.getElementById('preview'),
+    mime = document.getElementById('mimetype-select');
 
 start.addEventListener('click', async function () {
     let stream = await recordScreen();
-    let mimeType = 'video/webm';
+    let mimeType = 'video/' + mime.value;
     mediaRecorder = createRecorder(stream, mimeType);
 
     preview.srcObject = stream;
@@ -51,15 +52,14 @@ function createRecorder(stream, mimeType) {
 }
 
 function saveFile(recordedChunks) {
-
     const blob = new Blob(recordedChunks, {
-        type: 'video/webm'
+        type: 'video/' + mime.value
     });
     let filename = getRandomString(15);
 
     let downloadLink = document.createElement('a');
     downloadLink.href = URL.createObjectURL(blob);
-    downloadLink.download = `${filename}.webm`;
+    downloadLink.download = `${filename}.${mime.value}`;
 
     document.body.appendChild(downloadLink);
     downloadLink.click();
