@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screenhive.app</title>
+</head>
+<body>
+    
+    <h1>screenhive.app</h1>
+
+    <label for="mimetype-select">Choose the video format:</label>
+
+    <select id="mimetype-select">
+        <option value="webm">webm - optimized for web</option>
+        <option value="mp4">mp4 - optimized for compatibility</option>
+    </select>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <h2>Preview</h2>
+    <video id="preview" width="480" height="270" autoplay muted></video>
+
+    <script src="/script.js"></script>
+
+</body>
+</html>
