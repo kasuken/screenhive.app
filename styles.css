@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #000000; }
+
+.sh {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%; }
+  .sh__wrp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .sh__logo {
+    position: absolute;
+    top: 7vh;
+    display: block;
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    margin-top: 1.5rem; }
+  .sh__text--wrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .sh__text--choose {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem; }
+  .sh__btn {
+    display: block;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    min-width: 140px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease; }
+    .sh__btn:hover {
+      opacity: 0.8;
+      transform: scale(0.93);
+      background-position: right center; }
+    .sh__btn--wrp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 2rem;
+      gap: 2rem; }
+  .sh__video {
+    margin-top: 4rem;
+    max-width: 50vw;
+    border-radius: 12px;
+    background-color: #d6d6d6;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 15px 50px -15px rgba(0, 0, 0, 0.12); }

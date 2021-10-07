@@ -1,0 +1,25 @@
+{
+  "name": "screenhive.app",
+  "version": "1.0.0",
+  "description": "A simple web screen recorder",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass --include-path scss ./scss/index.scss ./styles.css",
+    "watch": "nodemon -e scss -x 'npm run css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Th3Wall/screenhive.app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Th3Wall/screenhive.app/issues"
+  },
+  "homepage": "https://github.com/Th3Wall/screenhive.app#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13"
+  }
+}
