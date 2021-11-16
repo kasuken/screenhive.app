@@ -349,5 +349,8 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-package-lock.json
+.parcel-cache
 .idea
+package-lock.json
+.eslintcache
+*.DS_Store

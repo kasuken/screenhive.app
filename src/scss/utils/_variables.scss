@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+$main-font: "Poppins", sans-serif;
+
+$darkest-grey: #2e2e2e;
+$dark-grey: #494949;
+$dark-purple: #2f13c0;
+$purple: #b14bcd;
+$orange: #c86c47;
+$light-orange: #e8b477;
+$light-red: #e5312d;
+$red: #c62628;
+
+$bg-light-color: $white;
+$bg-dark-color: $darkest-grey;
+$font-color: $dark-grey;
+
+$main-gradient: linear-gradient(
+  to right,
+  $dark-purple 0%,
+  $purple 34%,
+  $orange 70%,
+  $light-orange 90%
+);
+$red-gradient: linear-gradient(to right, $light-red 0%, $red 60%);
+$bezier-curve: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+
+$breakpoints: (
+  ll: 1450px,
+  lg: 1024px,
+  md: 768px,
+  sm: 640px,
+) !default;
+$max-width: 1440px;
+
+$mobile-side-padding: 1.5rem;
+$side-padding: 2rem;
+$default-radius: 10px;

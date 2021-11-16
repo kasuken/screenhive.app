@@ -1,2 +1,3 @@
-# screenhive.app
+# Screenhive
+
 A simple web screen recorder
