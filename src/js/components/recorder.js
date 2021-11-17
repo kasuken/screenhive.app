@@ -135,6 +135,14 @@ export default class recorderClass {
       this.toggleDropdown();
     });
 
+    document.addEventListener("click", (e) => {
+      if (this.set.dropdownToggle.classList.contains("toggled")) {
+        if (!e.target.closest(".sh__dropdown--btn")) {
+          this.toggleDropdown();
+        }
+      }
+    });
+
     this.set.dropdownOptions.forEach((el) => {
       el.addEventListener("click", () => {
         this.getSelectedValue(el);
