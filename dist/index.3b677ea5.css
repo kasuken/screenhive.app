@@ -631,6 +631,11 @@ body[data-theme=light] .sh__toast {
   border: 2px solid;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.6, -0.05, 0.01, 0.99);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (min-width: 768px) {
   .sh__toggler {

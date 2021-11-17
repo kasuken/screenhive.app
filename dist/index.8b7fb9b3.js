@@ -667,24 +667,31 @@ class themeTogglerClass {
         }
         return themeTogglerClass.instance;
     }
+    activateDarkMode() {
+        document.body.dataset.theme = "dark";
+        this.set.moon.classList.remove("active");
+        this.set.sun.classList.add("active");
+    }
+    activateLightMode() {
+        document.body.dataset.theme = "light";
+        this.set.sun.classList.remove("active");
+        this.set.moon.classList.add("active");
+    }
     getPreferredTheme() {
-        if (window.matchMedia("(prefers-color-scheme: dark)")) this.set.sun.classList.toggle("active");
-        else this.set.moon.classList.toggle("active");
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? this.activateDarkMode() : this.activateLightMode();
     }
     init() {
         this.getPreferredTheme();
         this.set.toggler.addEventListener("click", ()=>{
             if (document.body.dataset.theme) {
-                if (document.body.dataset.theme === "light") {
-                    document.body.dataset.theme = "dark";
-                    this.set.moon.classList.toggle("active");
-                    this.set.sun.classList.toggle("active");
-                } else {
-                    document.body.dataset.theme = "light";
-                    this.set.sun.classList.toggle("active");
-                    this.set.moon.classList.toggle("active");
-                }
+                if (document.body.dataset.theme === "light") this.activateDarkMode();
+                else this.activateLightMode();
             }
+        });
+        // Listen for OS theme changes
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e)=>{
+            if (e.matches) this.activateDarkMode();
+            else this.activateLightMode();
         });
     }
 }
