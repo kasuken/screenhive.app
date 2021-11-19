@@ -48,4 +48,16 @@
       }
     }
   }
+
+  &--love {
+    &-icon {
+      img {
+        max-width: 1rem;
+      }
+
+      &:hover {
+        animation: pump 1s infinite;
+      }
+    }
+  }
 }

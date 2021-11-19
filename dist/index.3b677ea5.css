@@ -85,6 +85,11 @@ select {
     box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0);
   }
 }
+@keyframes pump {
+  10% {
+    transform: scale(1.3);
+  }
+}
 html {
   overflow-x: hidden;
   font-size: 16px;
@@ -631,6 +636,11 @@ body[data-theme=light] .sh__toast {
   border: 2px solid;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.6, -0.05, 0.01, 0.99);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (min-width: 768px) {
   .sh__toggler {
@@ -750,5 +760,11 @@ body[data-theme=light] .sh__toast {
   max-width: 1.5rem;
   border-radius: 50%;
   transition: opacity 0.4s cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+.sh__footer--love-icon img {
+  max-width: 1rem;
+}
+.sh__footer--love-icon:hover {
+  animation: pump 1s infinite;
 }
 /*# sourceMappingURL=index.3b677ea5.css.map */
